@@ -1,0 +1,12 @@
+triggers:
+- envs: []
+  last_enabled_at: 2024-04-11 21:05:35.344079
+  name: API_TRIGGER_CREATED_FROM_CODE
+  pipeline_uuid: gcs_to_big_query
+  schedule_interval: null
+  schedule_type: api
+  settings: null
+  sla: null
+  start_time: 2024-04-11 21:05:35.343966
+  status: active
+  variables: null
