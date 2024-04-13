@@ -4,7 +4,7 @@ services:
     image: mageai/mageai:latest
     command: mage start ${PROJECT_NAME}
     env_file:
-      - .env
+      - ../.env
     build:
       context: .
       dockerfile: Dockerfile
@@ -13,6 +13,4 @@ services:
       - GOOGLE_SERVICE_ACC_KEY_FILEPATH=./${PROJECT_NAME}/secret/${GOOGLE_SERVICE_ACC_KEY_NAME}
     ports:
       - 6789:6789
-    # volumes:
-    #   - .:/home/src/
     restart: on-failure:5
