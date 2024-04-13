@@ -70,5 +70,5 @@ spark_config: {}
 tags: []
 type: python
 uuid: gcs_to_big_query
-variables_dir: /home/src/mage_data/your_first_project
+variables_dir: /home/src/mage_data/traffic_counting_paris
 widgets: []

@@ -19,8 +19,10 @@ def transform(data, *args, **kwargs):
     Returns:
         Anything (e.g. data frame, dictionary, array, int, str, etc.)
     """
-    # Specify your transformation logic here
-    print(data.shape)
+    # Specify your transformation logic here    
+    kwarg_logger = kwargs.get('logger')
+    kwarg_logger.info(f"{data.shape=}")
+    
     return data
 
 

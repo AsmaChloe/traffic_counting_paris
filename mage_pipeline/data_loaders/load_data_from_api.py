@@ -16,6 +16,8 @@ def load_data_from_api(*args, **kwargs):
     """
     Template for loading data from API
     """
+    kwarg_logger = kwargs.get('logger')
+
     execution_date = kwargs['execution_date']
     execution_date = execution_date.replace(year=execution_date.year - 1) #TODO a supprimer
 
@@ -27,7 +29,8 @@ def load_data_from_api(*args, **kwargs):
     set_global_variable(kwargs['pipeline_uuid'], 'date_start', date_start)
     set_global_variable(kwargs['pipeline_uuid'], 'date_end', date_end)
 
-    print(f"Fetch data from {date_start} to {date_end}")
+    kwarg_logger.info(f"Fetch data from {date_start} to {date_end}")
+
 
     # Original condition
     condition = f"t_1h >= date'{date_start}' and t_1h < date'{date_end}'"

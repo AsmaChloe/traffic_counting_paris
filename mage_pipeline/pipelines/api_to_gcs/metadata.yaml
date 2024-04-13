@@ -51,15 +51,17 @@ blocks:
   uuid: export_to_gcs
 - all_upstream_blocks_executed: true
   color: null
-  configuration: {}
+  configuration:
+    file_source:
+      path: data_exporters/trigger_gcs_to_big_query.py
   downstream_blocks: []
   executor_config: null
   executor_type: local_python
   has_callback: false
   language: python
-  name: trigger gcs to big query
+  name: trigger_gcs_to_big_query
   retry_config: null
-  status: executed
+  status: not_executed
   timeout: null
   type: data_exporter
   upstream_blocks:
@@ -88,7 +90,7 @@ tags: []
 type: python
 uuid: api_to_gcs
 variables:
-  date_end: 2023-04-11 22:00:00
-  date_start: 2023-04-11 21:00:00
+  date_end: 2023-04-13 15:00:00
+  date_start: 2023-04-13 14:00:00
 variables_dir: /home/src/mage_data/traffic_counting_paris
 widgets: []

@@ -1,14 +1,12 @@
 triggers:
 - envs: []
-  last_enabled_at: 2024-04-11 21:00:27.606676
+  last_enabled_at: 2024-04-12 12:37:19.030750
   name: api_to_gcs_trigger
   pipeline_uuid: api_to_gcs
   schedule_interval: '@hourly'
   schedule_type: time
   settings: null
   sla: null
-  start_time: 2024-04-11 23:00:00
+  start_time: 2024-04-12 12:00:00
   status: active
-  variables:
-    date_end: '2023-04-11T20:00:00'
-    date_start: '2023-04-11T19:00:00'
+  variables: {}

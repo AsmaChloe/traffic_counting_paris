@@ -28,7 +28,8 @@ def transform(data, *args, **kwargs):
     data['date_debut'] = pd.to_datetime(data['date_debut'])#.dt.date
     data['date_fin'] = pd.to_datetime(data['date_fin'])#.dt.date
 
-
+    data = data.drop(['Unnamed: 0'], axis = 1)
+    
     print(data.dtypes)
     return data
 

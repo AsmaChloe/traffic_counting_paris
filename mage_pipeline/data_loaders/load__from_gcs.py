@@ -21,6 +21,10 @@ def load_from_google_cloud_storage(*args, **kwargs):
 
     bucket_name = 'de-traffic-couting-paris-data-late-bucket'
     object_key = f"comptage_routier_{kwargs['date_start']}.csv"
+    # object_key = f"comptage_routier_2023-04-13 13:00:00.csv"
+    
+    kwarg_logger = kwargs.get('logger')
+    kwarg_logger.info(f"loading bukcet {object_key}")
 
     return GoogleCloudStorage.with_config(ConfigFileLoader(config_path, config_profile)).load(
         bucket_name,

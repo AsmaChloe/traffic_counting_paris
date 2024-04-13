@@ -48,7 +48,7 @@ default:
   #   auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
   #   client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/your_service_account_email"
   GOOGLE_SERVICE_ACC_KEY_FILEPATH: "{{ env_var('GOOGLE_SERVICE_ACC_KEY_FILEPATH') }}"
-  GOOGLE_LOCATION: US # Optional
+  GOOGLE_LOCATION: europe-west9 # Optional
   # MongoDB
   # Specify either the connection string or the (host, password, user, port) to connect to MongoDB.
   MONGODB_CONNECTION_STRING: "mongodb://{username}:{password}@{host}:{port}/"
