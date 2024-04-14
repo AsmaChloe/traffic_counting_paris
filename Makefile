@@ -5,18 +5,16 @@ export
 terraform up :
 	@echo "Creating ressources..."
 
-	export TF_VAR_credentials="./../secret/$(GOOGLE_SERVICE_ACC_KEY_NAME)"
-	
-	cd "old terraform" && terraform init
+	cd terraform && terraform init
 
-	cd "old terraform" && terraform plan
+	cd terraform && export TF_VAR_credentials="./../secret/$(GOOGLE_SERVICE_ACC_KEY_NAME)" && terraform plan
 
-	cd "old terraform" && terraform apply
+	cd terraform && export TF_VAR_credentials="./../secret/$(GOOGLE_SERVICE_ACC_KEY_NAME)" && terraform apply
 
 terraform down : 
 	@echo "Deleting ressources..."
 
-	cd "old terraform" && terraform destroy
+	cd terraform && export TF_VAR_credentials="./../secret/$(GOOGLE_SERVICE_ACC_KEY_NAME)" && terraform destroy
 
 docker:	
 	@echo "Pulling MAGE AI image"
