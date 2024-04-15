@@ -2,7 +2,7 @@ with
 
 source as (
 
-    select * from {{ source('staging', 'traffic_counting_data') }}
+    select * from {{ source('staging', 'traffic_counting_data_raw') }}
 
 ),
 

@@ -5,4 +5,4 @@ sources:
     database: de-traffic-couting-paris
     schema: traffic_counting
     tables:
-      - name: traffic_counting_data
+      - name: traffic_counting_data_raw
