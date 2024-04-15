@@ -14,7 +14,7 @@ def load_profile(*args, **kwargs):
     config_profile = 'default'
     config_loader = ConfigFileLoader(config_path, config_profile)
 
-    local_dbt = get_repo_path() + '/dbt/traffic-couting-paris'
+    local_dbt = get_repo_path() + '/dbt/traffic-counting-paris'
     local_dbt_path = Path(local_dbt)
     
     print('Writing demo profile...')

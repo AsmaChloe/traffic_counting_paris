@@ -3,7 +3,7 @@ blocks:
   color: blue
   configuration: {}
   downstream_blocks:
-  - launch_dbt_build
+  - dbt_build_launch
   executor_config: null
   executor_type: local_python
   has_callback: false
@@ -21,25 +21,25 @@ blocks:
     dbt:
       command: build
     dbt_profile_target: ''
-    dbt_project_name: dbt/traffic-couting-paris
+    dbt_project_name: dbt/traffic-counting-paris
     disable_query_preprocessing: false
     export_write_policy: append
     file_source:
-      path: dbts/launch_dbt_build.yaml
+      path: dbts/dbt_build_launch.yaml
     use_raw_sql: false
   downstream_blocks: []
   executor_config: null
   executor_type: local_python
   has_callback: false
   language: yaml
-  name: launch_dbt_build
+  name: dbt_build_launch
   retry_config: null
-  status: executed
+  status: not_executed
   timeout: null
   type: dbt
   upstream_blocks:
   - create_profiles_yml_dbt
-  uuid: launch_dbt_build
+  uuid: dbt_build_launch
 cache_block_output_in_memory: false
 callbacks: []
 concurrency_config: {}
