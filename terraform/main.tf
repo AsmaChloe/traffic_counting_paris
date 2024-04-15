@@ -35,9 +35,9 @@ resource "google_bigquery_dataset" "traffic_counting" {
   location   = var.location
 }
 
-resource "google_bigquery_table" "traffic_counting_data" {
+resource "google_bigquery_table" "traffic_counting_data_raw" {
   dataset_id = google_bigquery_dataset.traffic_counting.dataset_id
-  table_id   = "traffic_counting_data"
+  table_id   = "traffic_counting_data_raw"
 
   deletion_protection=false
 
