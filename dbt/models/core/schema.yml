@@ -1,0 +1,6 @@
+version: 2
+
+models:
+  - name: geographical_referential
+    description: > 
+      Geographical referential of the streets of Paris where there are sensors. Contains informations like name of the arc, name of the connecting arcs, shape and true length of the arc.

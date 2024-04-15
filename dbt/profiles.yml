@@ -1,0 +1,11 @@
+---
+default:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: de-traffic-couting-paris
+      dataset: traffic_counting
+      threads: 4           # Must be a value of 1 or greater
+      keyfile: ./../../secret/de-traffic-couting-paris-d53cfd26097d.json
