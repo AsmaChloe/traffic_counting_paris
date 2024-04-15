@@ -10,7 +10,7 @@ services:
       dockerfile: Dockerfile
     environment:
       - PROJECT_NAME=${PROJECT_NAME}
-      - GOOGLE_SERVICE_ACC_KEY_FILEPATH=./${PROJECT_NAME}/secret/${GOOGLE_SERVICE_ACC_KEY_NAME}
+      - GOOGLE_SERVICE_ACC_KEY_NAME=${GOOGLE_SERVICE_ACC_KEY_NAME}
     ports:
       - 6789:6789
     restart: on-failure:5

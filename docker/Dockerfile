@@ -7,3 +7,6 @@ ADD mage_pipeline/ /home/src/${PROJECT_NAME}
 
 # Copy json GCP key
 ADD secret /home/src/${PROJECT_NAME}/secret/
+
+# Copy DBT project
+ADD dbt /home/src/${PROJECT_NAME}/dbt/
