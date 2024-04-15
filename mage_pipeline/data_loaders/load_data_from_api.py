@@ -24,7 +24,7 @@ def load_data_from_api(*args, **kwargs):
     execution_date_hour_only = execution_date.replace(minute=0, second=0, microsecond=0)
     
     date_start = execution_date_hour_only
-    date_end = date_start.replace(hour=date_start.hour + 1)
+    date_end = date_start + timedelta(hours=1)
 
     set_global_variable(kwargs['pipeline_uuid'], 'date_start', date_start)
     set_global_variable(kwargs['pipeline_uuid'], 'date_end', date_end)

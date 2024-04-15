@@ -90,7 +90,7 @@ tags: []
 type: python
 uuid: api_to_gcs
 variables:
-  date_end: 2023-04-13 15:00:00
-  date_start: 2023-04-13 14:00:00
+  date_end: 2023-04-15 01:00:00
+  date_start: 2023-04-15 00:00:00
 variables_dir: /home/src/mage_data/traffic_counting_paris
 widgets: []
