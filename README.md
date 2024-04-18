@@ -86,6 +86,8 @@ Traffic state as of late, displayed by the first map, is aligned with the 2 chat
 
 2. [Create a Google Cloud Project through your Google Cloud dashboard](https://developers.google.com/workspace/guides/create-project?hl=fr)
 
+3. Copy porject id and put it in the .env as the value of the key GOOGLE_PROJECT_ID
+
 3. Create a Service Account
 1. Giving it these roles :
 - BigQuery Admin
