@@ -11,6 +11,7 @@ services:
     environment:
       - PROJECT_NAME=${PROJECT_NAME}
       - GOOGLE_SERVICE_ACC_KEY_NAME=${GOOGLE_SERVICE_ACC_KEY_NAME}
+      - GOOGLE_PROJECT_ID=${GOOGLE_PROJECT_ID}
     ports:
       - 6789:6789
     restart: on-failure:5

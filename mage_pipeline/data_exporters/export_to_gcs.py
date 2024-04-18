@@ -3,6 +3,7 @@ from mage_ai.io.config import ConfigFileLoader
 from mage_ai.io.google_cloud_storage import GoogleCloudStorage
 from pandas import DataFrame
 from os import path
+import os
 from datetime import date
 
 if 'data_exporter' not in globals():
@@ -21,8 +22,9 @@ def export_data_to_google_cloud_storage(df: DataFrame, **kwargs) -> None:
     
     config_path = path.join(get_repo_path(), 'io_config.yaml')
     config_profile = 'default'
-
-    bucket_name = 'de-traffic-couting-paris-data-late-bucket'
+    
+    google_project_id = os.environ['GOOGLE_PROJECT_ID']
+    bucket_name = f"{google_project_id}-data-late-bucket"
     object_key = f"comptage_routier_{str(kwargs['date_start'])}.csv"
 
     kwarg_logger.info(f"Data exported to bucket {object_key=}")

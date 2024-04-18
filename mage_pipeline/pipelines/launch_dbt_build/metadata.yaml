@@ -3,18 +3,35 @@ blocks:
   color: blue
   configuration: {}
   downstream_blocks:
-  - dbt_build_launch
+  - create_stg_schema_yml_dbt
   executor_config: null
   executor_type: local_python
   has_callback: false
   language: python
   name: create_profiles_yml_dbt
   retry_config: null
-  status: updated
+  status: executed
   timeout: null
   type: custom
   upstream_blocks: []
   uuid: create_profiles_yml_dbt
+- all_upstream_blocks_executed: true
+  color: blue
+  configuration: {}
+  downstream_blocks:
+  - dbt_build_launch
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: create_stg_schema_yml_dbt
+  retry_config: null
+  status: updated
+  timeout: null
+  type: custom
+  upstream_blocks:
+  - create_profiles_yml_dbt
+  uuid: create_stg_schema_yml_dbt
 - all_upstream_blocks_executed: false
   color: null
   configuration:
@@ -34,11 +51,11 @@ blocks:
   language: yaml
   name: dbt_build_launch
   retry_config: null
-  status: executed
+  status: failed
   timeout: null
   type: dbt
   upstream_blocks:
-  - create_profiles_yml_dbt
+  - create_stg_schema_yml_dbt
   uuid: dbt_build_launch
 cache_block_output_in_memory: false
 callbacks: []

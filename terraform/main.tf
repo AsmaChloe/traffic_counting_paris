@@ -16,7 +16,7 @@ provider "google" {
 
 # Bucket creation
 resource "google_storage_bucket" "data-lake-bucket" {
-  name          = var.data-lake-bucket-name
+  name          = var.data_lake_bucket_name
   location      = var.location
 
   # Optional, but recommended settings:
