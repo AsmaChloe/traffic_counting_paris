@@ -88,16 +88,16 @@ Traffic state as of late, displayed by the first map, is aligned with the 2 chat
 
 3. Copy porject id and put it in the .env as the value of the key GOOGLE_PROJECT_ID
 
-3. Create a Service Account
-1. Giving it these roles :
-- BigQuery Admin
-- Storage Admin
-- Storage Object Admin
-2. Save the JSON Key
-3. Add it to the folder "secret" of the project
-4. In .env put the name of the json key as the value of GOOGLE_SERVICE_ACC_KEY_NAME
-![](./images/.env.png)
-![](./images/location_service_key.png)
+4. Create a Service Account
+    1. Giving it these roles :
+    - BigQuery Admin
+    - Storage Admin
+    - Storage Object Admin
+    2. Save the JSON Key
+    3. Add it to the folder "secret" of the project
+    4. In .env put the name of the json key as the value of GOOGLE_SERVICE_ACC_KEY_NAME
+    ![](./images/.env.png)
+    ![](./images/location_service_key.png)
 
 ### Build the project
 Make sure you have launched docker desktop.
