@@ -10,12 +10,12 @@ blocks:
   language: python
   name: create_profiles_yml_dbt
   retry_config: null
-  status: executed
+  status: updated
   timeout: null
   type: custom
   upstream_blocks: []
   uuid: create_profiles_yml_dbt
-- all_upstream_blocks_executed: true
+- all_upstream_blocks_executed: false
   color: null
   configuration:
     dbt:
@@ -34,7 +34,7 @@ blocks:
   language: yaml
   name: dbt_build_launch
   retry_config: null
-  status: not_executed
+  status: executed
   timeout: null
   type: dbt
   upstream_blocks:

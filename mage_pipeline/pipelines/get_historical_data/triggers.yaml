@@ -1,0 +1,14 @@
+triggers:
+- envs: []
+  last_enabled_at: 2024-04-15 22:04:44.758659
+  name: Get historical data
+  pipeline_uuid: get_historical_data
+  schedule_interval: '@once'
+  schedule_type: time
+  settings: null
+  sla: null
+  start_time: 2024-04-14 22:04:00
+  status: active
+  variables:
+    date_end: '2024-04-15T04:00:00'
+    date_start: '2024-04-15T00:00:00'

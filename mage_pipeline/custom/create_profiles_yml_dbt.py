@@ -14,7 +14,7 @@ def load_profile(*args, **kwargs):
     config_profile = 'default'
     config_loader = ConfigFileLoader(config_path, config_profile)
 
-    local_dbt = get_repo_path() + '/dbt/traffic-counting-paris'
+    local_dbt = get_repo_path() + '/dbt'
     local_dbt_path = Path(local_dbt)
     
     print('Writing demo profile...')
@@ -33,9 +33,8 @@ def load_profile(*args, **kwargs):
                 project: de-traffic-couting-paris
                 dataset: traffic_counting
                 threads: 4 # Must be a value of 1 or greater
-                keyfile: "./../../secret/{{{{env_var('GOOGLE_SERVICE_ACC_KEY_NAME')}}}}"
+                keyfile: "./../secret/{{{{env_var('GOOGLE_SERVICE_ACC_KEY_NAME')}}}}"
     """
     )
-# keyfile: {{ variables('GOOGLE_SERVICE_ACC_KEY_FILEPATH') }}
     with open(local_dbt + '/profiles.yml', 'w') as file:
         yaml.dump(yml, file)

@@ -1,0 +1,12 @@
+triggers:
+- envs: []
+  last_enabled_at: 2024-04-15 16:12:57.222868
+  name: API_TRIGGER_CREATED_FROM_CODE
+  pipeline_uuid: launch_dbt_build
+  schedule_interval: null
+  schedule_type: api
+  settings: null
+  sla: null
+  start_time: 2024-04-15 16:12:57.222808
+  status: active
+  variables: null

@@ -10,12 +10,12 @@ blocks:
   language: python
   name: Load data from API
   retry_config: null
-  status: executed
+  status: updated
   timeout: null
   type: data_loader
   upstream_blocks: []
   uuid: load_data_from_api
-- all_upstream_blocks_executed: true
+- all_upstream_blocks_executed: false
   color: null
   configuration: {}
   downstream_blocks:
@@ -32,7 +32,7 @@ blocks:
   upstream_blocks:
   - load_data_from_api
   uuid: tranform_from_api_to_gcs
-- all_upstream_blocks_executed: true
+- all_upstream_blocks_executed: false
   color: null
   configuration: {}
   downstream_blocks:
@@ -49,7 +49,7 @@ blocks:
   upstream_blocks:
   - tranform_from_api_to_gcs
   uuid: export_to_gcs
-- all_upstream_blocks_executed: true
+- all_upstream_blocks_executed: false
   color: null
   configuration:
     file_source:
@@ -61,7 +61,7 @@ blocks:
   language: python
   name: trigger_gcs_to_big_query
   retry_config: null
-  status: not_executed
+  status: executed
   timeout: null
   type: data_exporter
   upstream_blocks:
@@ -90,7 +90,7 @@ tags: []
 type: python
 uuid: api_to_gcs
 variables:
-  date_end: 2023-04-15 02:00:00
-  date_start: 2023-04-15 01:00:00
+  date_end: 2024-04-17 18:00:00
+  date_start: 2024-04-17 17:00:00
 variables_dir: /home/src/mage_data/traffic_counting_paris
 widgets: []

@@ -9,4 +9,18 @@ triggers:
   sla: null
   start_time: 2024-04-12 12:00:00
   status: active
-  variables: {}
+  variables:
+    date_end: '2024-04-14T18:00:00'
+    date_start: '2024-04-14T17:00:00'
+    manually_launched: false
+- envs: []
+  last_enabled_at: 2024-04-15 17:33:15.093953
+  name: API_TRIGGER_CREATED_FROM_CODE
+  pipeline_uuid: api_to_gcs
+  schedule_interval: null
+  schedule_type: api
+  settings: null
+  sla: null
+  start_time: 2024-04-15 17:33:15.093877
+  status: active
+  variables: null
