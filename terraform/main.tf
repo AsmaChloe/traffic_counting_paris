@@ -33,6 +33,8 @@ resource "google_storage_bucket" "data-lake-bucket" {
 resource "google_bigquery_dataset" "traffic_counting" {
   dataset_id = "traffic_counting"
   location   = var.location
+
+  delete_contents_on_destroy = true
 }
 
 resource "google_bigquery_table" "traffic_counting_data_raw" {
